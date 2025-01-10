@@ -1,295 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Poppins', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f8f9fa;
-    }
-
-    header {
-      background: linear-gradient(90deg, #007bff, #0056b3);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    header nav a:hover {
-      color: #ffdd57;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 5rem 1rem;
-      background: url('https://source.unsplash.com/1600x900/?technology,coding') no-repeat center/cover;
-      color: white;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero a {
-      background: #ffdd57;
-      color: #333;
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .hero a:hover {
-      background: #ffc107;
-    }
-
-    section {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #0056b3;
-      margin-bottom: 1.5rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project {
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      border-radius: 10px;
-      background: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .project h3 {
-      margin-top: 0;
-    }
-
-    .project a {
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .project a:hover {
-      color: #0056b3;
-    }
-
-    .contact {
-      background: #007bff;
-      color: white;
-      padding: 2rem 1rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .contact h2 {
-      color: #ffdd57;
-    }
-
-    .contact-info {
-      margin-bottom: 2rem;
-    }
-
-    .contact-info h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-
-    .contact-info p {
-      margin: 0.5rem 0 1.5rem;
-    }
-
-    .contact form {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .contact input,
-    .contact textarea,
-    .contact button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .contact input,
-    .contact textarea {
-      border: 1px solid #ddd;
-    }
-
-    .contact button {
-      background: #ffdd57;
-      color: #333;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .contact button:hover {
-      background: #ffc107;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #222;
-      color: white;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    footer a {
-      color: #ffdd57;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #ffc107;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website showcasing projects, skills, and contact information.">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-
 <body>
-  <!-- Header -->
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Hi, I'm SowmyaManukonda</h2>
-    <p>I create interactive and user-friendly websites.</p>
-    <a href="#projects">View My Work</a>
-  </section>
+    <section id="home" class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Showcasing my skills, projects, and journey.</p>
+        <a href="#projects" class="cta">Explore Projects</a>
+    </section>
 
-  <!-- About Section -->
-   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm Sowmya Manukonda, a passionate web developer with a strong background in creating dynamic,
-      user-friendly websites. My expertise lies in HTML, CSS, JavaScript, and React, allowing me to craft responsive
-      designs that deliver seamless user experiences.
-    </p>
-    <p>
-      With a keen eye for detail and a love for solving complex problems, I thrive on bringing ideas to life through
-      code. Whether it's building sleek interfaces or optimizing performance, I aim to merge functionality with
-      creativity in every project I work on.
-    </p>
-    <p>
-      Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and sharing my
-      knowledge through blogs and workshops. I'm always eager to collaborate and take on new challenges that push the
-      boundaries of web development.
-    </p>
-  </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p> Hello! I'm Sowmya Manukonda, a passionate web developer with a strong background in creating dynamic,
+            user-friendly websites. My expertise lies in HTML, CSS, JavaScript, and React, allowing me to craft responsive
+            designs that deliver seamless user experiences.
+        </p>
+        <p>
+            With a keen eye for detail and a love for solving complex problems, I thrive on bringing ideas to life through
+            code. Whether it's building sleek interfaces or optimizing performance, I aim to merge functionality with
+            creativity in every project I work on.
+        </p>
+        <p>
+            Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and sharing my
+            knowledge through blogs and workshops. I'm always eager to collaborate and take on new challenges that push the
+            boundaries of web development.
+        </p>
+    </section>
 
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="assets/images/logo.jpeg" alt="Le Cafe" class="project-img">
+                <h3>Le Cafe - Online Menu</h3>
+                <p>A full-stack cafe website with an interactive menu, order system, and contact options.</p>
+                <a href="https://sowmyamanukonda.github.io/my-store/" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/habittracker.jpeg" alt="habit-tracker" class="project-img">
+                <h3>habit-tracker</h3>
+                <p>A habit tracker that helps users monitor and improve their daily habits by tracking progress and setting goals.</p>
+                <a href="https://sowmyamanukonda.github.io/habit-tracker/" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300" alt="Project 3" class="project-img">
+                <h3>Project 3</h3>
+                <p>Description of Project 3.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Le Cafe - Online Menu</h3>
-        <p>A full-stack cafe website with an interactive menu, order system, and contact options.</p>
-        <a href="https://sowmyamanukonda.github.io/my-store/">View Project</a>
-      </div>
-      <div class="project">
-        <h3>Blog Application</h3>
-        <p>A platform for sharing thoughts and ideas.</p>
-        <a href="https://sowmyamanukonda.github.io/habit-tracker/">View Project</a>
-      </div>
-    </div>
-  </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+        <ul class="social-links">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </section>
+    <ul class="social-links">
+        <li><a href="https://www.linkedin.com" target=""><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com" target=""><i class="fab fa-github"></i></a></li>
+        <li><a href="https://twitter.com" target=""><i class="fab fa-twitter"></i></a></li>
+    </ul>
+    
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
+    <footer>
+        <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+    </footer>
 
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <h3>Email</h3>
-      <p>sowmyamanukonda2005@gmail.com</p>
-      <h3>Phone</h3>
-      <p>+91 7801006108</p>
-    </div>
-
-    <!-- Contact Form -->
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Sowmya Manukonda. Built with <a href="https://developer.mozilla.org">HTML & CSS</a>.</p>
-  </footer>
+    <script>
+        // Smooth scrolling
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
