@@ -1,65 +1,67 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     color: #333;
-    background: linear-gradient(to right, #ffdee9, #b5fffc);
-    background-size: 200% 200%;
-    animation: gradientAnimation 6s ease infinite;
+    line-height: 1.6;
+    background-color: #F5F7FA;
 }
 
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header and Navigation */
 header {
-    background: #333;
+    background: #2C3E50;
     color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #50E3C2; /* Teal for the logo */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin: 0 1rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: #fff;
     font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #00bcd4;
-    transform: scale(1.05);
+    color: #FF6F61; /* Coral for hover effect */
 }
 
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
     color: #fff;
-    animation: fadeIn 2s ease-in;
+    padding: 5rem 2rem;
+    text-align: center;
 }
 
 .hero h1 {
@@ -73,199 +75,267 @@ nav {
 }
 
 .cta {
-    text-decoration: none;
-    color: #333;
-    background: #00bcd4;
-    padding: 0.5rem 1.5rem;
+    background: #FF6F61; /* Coral for the CTA button */
+    color: #fff;
+    padding: 0.8rem 2rem;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    font-weight: 600;
+    transition: background 0.3s ease;
 }
 
 .cta:hover {
-    background: #0288d1;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    filter: brightness(1.1);
+    background: #FF4A3D; /* Darker Coral for hover */
 }
 
-section {
-    padding: 2rem 1rem;
-    max-width: 1200px;
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2C3E50; /* Dark Blue for headings */
+}
+
+.about-content {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: justify;
+    color: #555;
 }
 
-section:nth-of-type(2) {
-    background: #f9f9f9;
-    color: #333;
+.resume-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #4A90E2;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.resume-link:hover {
+    background: #357ABD;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.skill i {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 4rem 2rem;
+    background: #F5F7FA;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2C3E50; /* Dark Blue for headings */
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .project-card {
     background: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: slideUp 1.2s ease-in;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.project-card img {
-    max-width: 80%;  /* Adjust the width to a smaller percentage */
-    height: auto;  /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the image */
-    display: block;  /* Make sure the image is block-level for centering */
-}
-
 
 .project-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .project-card h3 {
-    margin-bottom: 0.5rem;
-    color: #00bcd4;
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #2C3E50; /* Dark Blue for project titles */
 }
 
 .project-card p {
+    margin: 1rem;
     color: #666;
 }
 
-footer {
+.project-link {
+    display: block;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
+    background: #4A90E2; /* Soft Blue for project links */
     color: #fff;
-    margin-top: 2rem;
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero p {
-        font-size: 1.3rem;
-    }
-
-    .cta {
-        padding: 0.8rem 2rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .hero h1 {
-        font-size: 4rem;
-    }
-
-    .hero p {
-        font-size: 1.4rem;
-    }
-
-    .projects-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.project-link:hover {
+    background: #357ABD; /* Darker Blue for hover */
 }
 
 /* Contact Section */
-#contact {
-    background-color: #f4f4f9;
-    padding: 20px 15px;  /* Reduced padding */
+.contact-section {
+    padding: 4rem 2rem;
+    background: #fff;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 
-#contact h2 {
-    font-size: 2rem;  /* Reduced the font size */
-    margin-bottom: 15px;  /* Reduced margin */
-    color: #333;
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2C3E50; /* Dark Blue for headings */
 }
 
-#contact p {
-    font-size: 1rem;  /* Reduced font size */
-    color: #555;
-    margin-bottom: 15px;  /* Reduced margin */
+.contact-section a {
+    color: #4A90E2; /* Soft Blue for links */
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-#contact a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+.contact-section a:hover {
+    color: #357ABD; /* Darker Blue for hover */
 }
 
-#contact a:hover {
-    text-decoration: underline;
+/* Footer */
+footer {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-#contact form {
-    margin-top: 20px;
-    display: grid;
-    gap: 8px;  /* Reduced gap between form fields */
-    justify-items: center;
+.social-links {
+    margin-top: 1rem;
 }
 
-#contact form input, #contact form textarea {
-    padding: 8px;  /* Reduced padding */
-    width: 70%;  /* Reduced width */
-    max-width: 350px;  /* Reduced max width */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.9rem;  /* Smaller font size */
-    box-sizing: border-box;
+.social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
-#contact form button {
-    padding: 10px 20px;  /* Reduced padding */
-    background-color: #4CAF50;
-    color: white;
+.social-links a:hover {
+    color: #FF6F61;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4A90E2;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;  /* Smaller font size */
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-#contact form button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+#back-to-top:hover {
+    background: #357ABD;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1A1A1A;
+    color: #F5F7FA;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #111;
+}
+
+.dark-mode .project-card, .dark-mode .skill {
+    background-color: #222;
+    color: #F5F7FA;
+}
+
+.dark-mode .project-link, .dark-mode .resume-link {
+    background-color: #4A90E2;
+}
+
+.dark-mode .project-link:hover, .dark-mode .resume-link:hover {
+    background-color: #357ABD;
 }

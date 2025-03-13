@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
@@ -18,6 +18,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -25,59 +26,92 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Showcasing my skills, projects, and journey.</p>
-        <a href="#projects" class="cta">Explore Projects</a>
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcasing my skills, projects, and journey.</p>
+            <a href="#projects" class="cta">Explore Projects</a>
+        </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about-section">
         <h2>About Me</h2>
-        <p> Hello! I'm Sowmya Manukonda, a passionate web developer with a strong background in creating dynamic,
-            user-friendly websites. My expertise lies in HTML, CSS, JavaScript, and React, allowing me to craft responsive
-            designs that deliver seamless user experiences.
-        </p>
-        <p>
-            With a keen eye for detail and a love for solving complex problems, I thrive on bringing ideas to life through
-            code. Whether it's building sleek interfaces or optimizing performance, I aim to merge functionality with
-            creativity in every project I work on.
-        </p>
-        <p>
-            Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and sharing my
-            knowledge through blogs and workshops. I'm always eager to collaborate and take on new challenges that push the
-            boundaries of web development.
-        </p>
+        <div class="about-content">
+            <p>Hello! I'm Sowmya Manukonda, a passionate web developer with a strong background in creating dynamic, user-friendly websites. My expertise lies in HTML, CSS, JavaScript, and React, allowing me to craft responsive designs that deliver seamless user experiences.</p>
+            <p>With a keen eye for detail and a love for solving complex problems, I thrive on bringing ideas to life through code. Whether it's building sleek interfaces or optimizing performance, I aim to merge functionality with creativity in every project I work on.</p>
+            <p>Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and sharing my knowledge through blogs and workshops. I'm always eager to collaborate and take on new challenges that push the boundaries of web development.</p>
+            <a href="path/to/resume.pdf" download class="resume-link">Download Resume</a>
+        </div>
     </section>
 
-    <section id="projects">
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill" style="background-image: url('assets/image/html5.webp');">
+                <div class="skill-content">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+            </div>
+            <div class="skill" style="background-image: url('assets/image/css.png');">
+                <div class="skill-content">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+            </div>
+            <div class="skill" style="background-image: url('assets/image/JavaScript-Symbol.png');">
+                <div class="skill-content">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div class="skill" style="background-image: url('assets/image/react.png');">
+                <div class="skill-content">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
         <h2>Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <img src="assets/images/logo.jpeg" alt="Le Cafe" class="project-img">
+                <img src="assets/image/logo.jpeg" alt="Le Cafe" class="project-img">
                 <h3>Le Cafe - Online Menu</h3>
                 <p>A full-stack cafe website with an interactive menu, order system, and contact options.</p>
                 <a href="https://sowmyamanukonda.github.io/my-store/" class="project-link">View Project</a>
             </div>
             <div class="project-card">
                 <img src="assets/images/habittracker.jpeg" alt="habit-tracker" class="project-img">
-                <h3>habit-tracker</h3>
-                <p>A habit tracker that helps users monitor and improve their daily habits by tracking progress and setting goals.</p>
-                <a href="https://sowmyamanukonda.github.io/habit-tracker/" class="project-link">View Project</a>
+                <h3>Discover India: Land of Diversity</h3>
+                <p>Discover the rich heritage, stunning landscapes, and vibrant culture of India with Incredible India Explorer – your ultimate guide to unforgettable journeys across this diverse land.</p>
+                <a href="https://sowmyamanukonda.github.io/TravelVista-Destination-Showcase/" class="project-link">View Project</a>
             </div>
             <div class="project-card">
                 <img src="https://via.placeholder.com/300" alt="Bank" class="project-img">
-                <h3>Bank </h3>
+                <h3>Bank</h3>
                 <p>Description of Project 3.</p>
                 <a href="https://sowmyamanukonda.github.io/bank/" class="project-link">View Project</a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <h2>Contact</h2>
         <p>Feel free to reach out to me at <a href="mailto:sowmyamanukonda2005@gmail.com">sowmyamanukonda2005@gmail.com</a>.</p>
+    </section>
+
     <footer>
         <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/sowmyamanukonda" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/sowmyamanukonda" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/sowmyamanukonda" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
+
+    <button id="back-to-top" title="Go to top">↑</button>
 
     <script>
         // Smooth scrolling
@@ -91,6 +125,39 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Dark mode toggle
+        const toggleButton = document.createElement('button');
+        toggleButton.innerText = 'Toggle Dark Mode';
+        toggleButton.style.position = 'fixed';
+        toggleButton.style.bottom = '20px';
+        toggleButton.style.left = '20px';
+        toggleButton.style.padding = '10px 20px';
+        toggleButton.style.borderRadius = '5px';
+        toggleButton.style.backgroundColor = '#4A90E2';
+        toggleButton.style.color = '#fff';
+        toggleButton.style.border = 'none';
+        toggleButton.style.cursor = 'pointer';
+        document.body.appendChild(toggleButton);
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
         });
     </script>
 </body>
