@@ -2,175 +2,408 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website showcasing projects, skills, and contact information.">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Sowmya Manukonda's portfolio showcasing web development projects and skills in HTML, CSS, JavaScript, and React.">
+    <meta name="keywords" content="web developer, portfolio, frontend developer, Sowmya Manukonda, HTML, CSS, JavaScript, React">
+    <meta property="og:image" content="assets/preview-image.jpg">
+    <title>Sowmya Manukonda | Web Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/your-new-code.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #2C3E50;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --dark-bg: #222;
+            --dark-text: #f9f9f9;
+        }
+        
+        .dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">MyPortfolio</div>
+        <nav aria-label="Main navigation">
+            <div class="logo">SM</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#timeline">Journey</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Showcasing my skills, projects, and journey.</p>
-            <a href="#projects" class="cta">Explore Projects</a>
+            <h1>Sowmya Manukonda</h1>
+            <p class="typing-text">Frontend Developer specializing in React & JavaScript</p>
+            <div class="hero-btns">
+                <a href="#projects" class="cta">View Projects</a>
+                <a href="#contact" class="cta secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
         </div>
     </section>
 
     <section id="about" class="about-section">
         <h2>About Me</h2>
         <div class="about-content">
-            <p>Hello! I'm Sowmya Manukonda, a passionate web developer with a strong background in creating dynamic, user-friendly websites. My expertise lies in HTML, CSS, JavaScript, and React, allowing me to craft responsive designs that deliver seamless user experiences.</p>
-            <p>With a keen eye for detail and a love for solving complex problems, I thrive on bringing ideas to life through code. Whether it's building sleek interfaces or optimizing performance, I aim to merge functionality with creativity in every project I work on.</p>
-            <p>Outside of coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and sharing my knowledge through blogs and workshops. I'm always eager to collaborate and take on new challenges that push the boundaries of web development.</p>
-            <a href="Sowmya Manukonda.pdf" download class="resume-link">Download Resume</a>
+            <div class="about-img">
+                <img loading="lazy" src="assets/profile.jpg" alt="Sowmya Manukonda" width="300" height="300">
+            </div>
+            <div class="about-text">
+                <p>Hello! I'm Sowmya Manukonda, a passionate web developer with expertise in creating dynamic, responsive websites. I specialize in modern frontend technologies and focus on delivering exceptional user experiences.</p>
+                <p>My development approach combines technical excellence with creative problem-solving. I'm proficient in the entire frontend development lifecycle from concept to deployment.</p>
+                <div class="about-links">
+                    <a href="Sowmya_Manukonda_Resume.pdf" target="_blank" class="resume-link">View Resume</a>
+                    <a href="https://github.com/sowmyamanukonda" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/sowmya-manukonda-b5829b302" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="skills" class="skills-section">
-        <h2>Skills</h2>
+        <h2>Technical Skills</h2>
         <div class="skills-container">
-            <div class="skill" style="background-image: url('assets/image/html5.webp');">
-                <div class="skill-content">
-                    <i class="fab fa-html5"></i>
-                    <p>HTML</p>
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <p>HTML5</p>
+                        <div class="skill-bar"><span style="width: 95%"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <p>CSS3</p>
+                        <div class="skill-bar"><span style="width: 90%"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <p>JavaScript</p>
+                        <div class="skill-bar"><span style="width: 85%"></span></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <p>React</p>
+                        <div class="skill-bar"><span style="width: 80%"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="skill" style="background-image: url('assets/image/css.png');">
-                <div class="skill-content">
-                    <i class="fab fa-css3-alt"></i>
-                    <p>CSS</p>
-                </div>
-            </div>
-            <div class="skill" style="background-image: url('assets/image/JavaScript-Symbol.png');">
-                <div class="skill-content">
-                    <i class="fab fa-js"></i>
-                    <p>JavaScript</p>
-                </div>
-            </div>
-            <div class="skill" style="background-image: url('assets/image/react.png');">
-                <div class="skill-content">
-                    <i class="fab fa-react"></i>
-                    <p>React</p>
+            
+            <div class="skill-category">
+                <h3>Tools & More</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <p>Git</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-npm"></i>
+                        <p>npm</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-terminal"></i>
+                        <p>CLI</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Responsive Design</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects-section">
-        <h2>Projects</h2>
+        <h2>Featured Projects</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="game">Games</button>
+            <button class="filter-btn" data-filter="tool">Tools</button>
+        </div>
         <div class="projects-container">
-            <div class="project-card">
-                <img src="assets/image/logo.jpeg" alt="Le Cafe" class="project-img">
-                <h3>Le Cafe - Online Menu</h3>
-                     <p> Explore a delicious range of freshly brewed coffees, teas, pastries, and gourmet meals. Order online and enjoy a delightful café experience anytime, anywhere.</p>
-                <a href="https://sowmyamanukonda.github.io/my-store/" class="project-link">View Project</a>
+            <div class="project-card" data-category="web">
+                <img loading="lazy" src="assets/image/logo.jpeg" alt="Le Cafe Online Menu" class="project-img">
+                <div class="project-info">
+                    <h3>Le Cafe - Online Menu</h3>
+                    <p>Interactive cafe menu with category filtering and cart functionality.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sowmyamanukonda.github.io/my-store/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/sowmyamanukonda/my-store" target="_blank">Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <img src="assets/image/project2.jpg" alt="habit-tracker" class="project-img">
-                <h3>Discover India: Land of Diversity</h3>
-                  <p>Explore vibrant cultures, majestic landscapes, and ancient heritage. From bustling cities to serene villages, experience the essence of India.</p>                
-                     <a href="https://sowmyamanukonda.github.io/TravelVista-Destination-Showcase/" class="project-link">View Project</a>
+            
+            <div class="project-card" data-category="web">
+                <img loading="lazy" src="assets/image/project2.jpg" alt="Discover India" class="project-img">
+                <div class="project-info">
+                    <h3>Discover India</h3>
+                    <p>Interactive travel guide showcasing India's diverse culture.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>CSS Modules</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sowmyamanukonda.github.io/TravelVista-Destination-Showcase/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/sowmyamanukonda/TravelVista-Destination-Showcase" target="_blank">Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <img src="assets/image/project4.jpg" alt="Bank" class="project-img">
-                <h3>Bank</h3>
-                       <p> Secure, fast, and convenient banking at your fingertips. Manage accounts, transfer funds, and access financial services anytime, anywhere.</p>
-                <a href="https://sowmyamanukonda.github.io/bank/" class="project-link">View Project</a>
+            
+            <div class="project-card" data-category="game">
+                <img loading="lazy" src="assets/image/project3.jpg" alt="2048 Game" class="project-img">
+                <div class="project-info">
+                    <h3>2048 Game</h3>
+                    <p>Classic number puzzle game with score tracking.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>CSS Grid</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sowmyamanukonda.github.io/2048-game/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/sowmyamanukonda/2048-game" target="_blank">Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <img src="assets/image/project3.jpg" alt="2048-game" class="project-img">
-                <h3>2048 Game</h3>
-                <p>2048 is a sliding tile puzzle game where players merge numbered tiles to reach 2048.</p>
-                <a href="https://sowmyamanukonda.github.io/2048-game/" class="project-link">View Project</a>
+            
+            <div class="project-card" data-category="tool">
+                <img loading="lazy" src="assets/image/project5.jpg" alt="Morse Code Translator" class="project-img">
+                <div class="project-info">
+                    <h3>Morseify</h3>
+                    <p>Morse code translator with audio playback and dark mode.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Web Audio API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://sowmyamanukonda.github.io/morse-translator/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/sowmyamanukonda/morse-translator" target="_blank">Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <img src="assets/image/project5.jpg" alt="Morseify" class="project-img">
-                <h3>Morseify</h3>
-                <p>"Morseify" – A sleek, interactive Morse code translator that converts text to Morse signals (and vice versa) with audio playback, dark mode, and shareable links. Perfect for learners, hobbyists, and secret message fun!</p>
-                <a href="https://sowmyamanukonda.github.io/morse-translator/" class="project-link">View Project</a>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <h2>My Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Present</div>
+                <div class="timeline-content">
+                    <h3>Frontend Developer</h3>
+                    <p>Developing responsive web applications using modern JavaScript frameworks.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2020 - 2022</div>
+                <div class="timeline-content">
+                    <h3>Web Development Student</h3>
+                    <p>Completed intensive coursework in HTML, CSS, JavaScript, and React.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2018 - 2020</div>
+                <div class="timeline-content">
+                    <h3>Computer Science Fundamentals</h3>
+                    <p>Learned core programming concepts and problem-solving techniques.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at <a href="mailto:sowmyamanukonda2005@gmail.com">sowmyamanukonda2005@gmail.com</a>.</p>
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> sowmyamanukonda2005@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                <div class="contact-social">
+                    <a href="https://github.com/sowmyamanukonda" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sowmya-manukonda-b5829b302/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" netlify>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/sowmyamanukonda" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/sowmyamanukonda" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/sowmyamanukonda" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Sowmya Manukonda. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </footer>
 
-    <button id="back-to-top" title="Go to top">↑</button>
+    <button id="back-to-top" aria-label="Back to top">↑</button>
 
     <script>
+        // Current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
         // Smooth scrolling
-        const links = document.querySelectorAll('.nav-links a');
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 window.scrollTo({
-                    top: target.offsetTop,
+                    top: target.offsetTop - 80,
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                if(navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             });
         });
 
         // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-
+        const backToTopBtn = document.getElementById('back-to-top');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
+                backToTopBtn.style.display = 'block';
             } else {
-                backToTopButton.style.display = 'none';
+                backToTopBtn.style.display = 'none';
             }
         });
 
-        backToTopButton.addEventListener('click', () => {
+        backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Dark mode toggle
-        const toggleButton = document.createElement('button');
-        toggleButton.innerText = 'Toggle Dark Mode';
-        toggleButton.style.position = 'fixed';
-        toggleButton.style.bottom = '20px';
-        toggleButton.style.left = '20px';
-        toggleButton.style.padding = '10px 20px';
-        toggleButton.style.borderRadius = '5px';
-        toggleButton.style.backgroundColor = '#4A90E2';
-        toggleButton.style.color = '#fff';
-        toggleButton.style.border = 'none';
-        toggleButton.style.cursor = 'pointer';
-        document.body.appendChild(toggleButton);
-
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if(filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
+
+        // Dark mode toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.className = 'dark-mode-toggle';
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        document.body.appendChild(darkModeToggle);
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkModeToggle.innerHTML = document.body.classList.contains('dark-mode') ? 
+                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            
+            // Save preference to localStorage
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        });
+        
+        // Check for saved preference
+        if(localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Typing effect for hero text
+        const typingText = document.querySelector('.typing-text');
+        const texts = ["Frontend Developer", "React Specialist", "JavaScript Enthusiast", "UI/UX Focused"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if(isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if(!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, 1500);
+            } else if(isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+        
+        // Start typing effect
+        setTimeout(type, 1000);
     </script>
 </body>
 </html>
